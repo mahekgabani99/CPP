@@ -1,0 +1,111 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+public:
+    int id;
+    string name;
+    int age;
+    string role;
+    double slry;
+    string city;
+    double expr;
+    string compname;
+
+    void setData() {
+        cout << "Enter employee id: ";
+        cin >> id;
+        cout << "Enter employee name: ";
+        cin >> name;
+        cout << "Enter employee age: ";
+        cin >> age;
+        cout << "Enter employee role: ";
+        cin >> role;
+        cout << "Enter employee salary: ";
+        cin >> slry;
+        cout << "Enter employee city name: ";
+        cin >> city;
+        cout << "Enter employee experience: ";
+        cin >> expr;
+        cout << "Enter employee company name: ";
+        cin >> compname;
+    }
+
+    void getData() {
+        cout << endl << endl << "Employee id          : " << id << endl;
+        cout << "Employee name        : " << name << endl;
+        cout << "Employee age         : " << age << endl;
+        cout << "Employee role        : " << role << endl;
+        cout << "Employee salary      : " << slry << endl;
+        cout << "Employee city name   : " << city << endl;
+        cout << "Employee experience  : " << expr << endl;
+        cout << "Employee company name: " << compname << endl;
+    }
+};
+
+int main() {
+    Employee emp1, emp2, emp3, emp4, emp5;
+
+    emp1.setData();
+    emp2.setData();
+    emp3.setData();
+    emp4.setData();
+    emp5.setData();
+
+    emp1.getData();
+    emp2.getData();
+    emp3.getData();
+    emp4.getData();
+    emp5.getData();
+}
+
+Q2
+#include <iostream>
+using namespace std;
+
+class Car {
+public:
+    double car_id;
+    string car_comp_name;
+    string car_color;
+    string car_model;
+    int car_release_year;
+
+    void setData() {
+        cout << endl << endl << "Enter car information:" << endl;
+        cout << "Enter car id: ";
+        cin >> car_id;
+        cout << "Enter car company name: ";
+        cin >> car_comp_name;
+        cout << "Enter car color: ";
+        cin >> car_color;
+        cout << "Enter car model: ";
+        cin >> car_model;
+        cout << "Enter car release year: ";
+        cin >> car_release_year;
+    }
+
+    void getData() {
+        cout << endl << endl << "Car information:" << endl;
+        cout << "Car id                : " << car_id << endl;
+        cout << "Car company name      : " << car_comp_name << endl;
+        cout << "Car color             : " << car_color << endl;
+        cout << "Car model             : " << car_model << endl;
+        cout << "Car release year      : " << car_release_year << endl;
+    }
+};
+
+int main() {
+    Car car1, car2, car3, car4;
+
+    car1.setData();
+    car2.setData();
+    car3.setData();
+    car4.setData();
+
+    car1.getData();
+    car2.getData();
+    car3.getData();
+    car4.getData();
+}
+
