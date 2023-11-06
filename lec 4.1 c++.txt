@@ -1,0 +1,72 @@
+Q1
+#include <iostream>
+using namespace std;
+
+class X 
+{
+   public:
+      int a, b, c;
+};
+class Y : public X 
+{
+   public:
+      void setData()
+    {
+      	cout << "Enter Value of A: ";
+      	cin >> a;
+      	cout << "Enter Value of B: ";
+      	cin >> b;
+      	cout << "Enter Value of C: ";
+      	cin >> c;
+      	cout << endl;
+	  }
+    void getData() 
+	  {
+        cout << "Sum of cubes of three numbers is: " << (a*a*a) + (b*b*b) + (c*c*c);
+    }
+};
+int main() 
+{
+    Y obj;
+    obj.setData();
+    obj.getData();
+    return 0;
+}
+
+Q2
+
+#include<iostream>
+using namespace std;
+class m{
+protected :
+double Celsius,Fehrenheit,Kelvin;
+};
+class g : public m {
+public :
+double toFehrenheit(double Celsius)
+{
+this->Celsius = Celsius;
+return Fehrenheit = (Celsius * 9/5) + 32;
+}
+};
+class s: public g{
+public :
+double toKelvin(double fer)
+{
+this->Fehrenheit = Fehrenheit;
+return Kelvin = (Fehrenheit - 32) * 5/9 + 273.15;
+}
+};
+int main()
+{
+double Celsius,Fehrenheit,Kelvin;
+s r1;
+cout << "ENTER TEMPERATURE IN CELSIUS :  ";
+cin >> Celsius;
+Fehrenheit = r1.toFehrenheit(Celsius);
+Kelvin = r1.toKelvin(Fehrenheit);
+cout<<"...........................................\n";
+cout << "Celsius   \tFehrenheit    \tKelvin" << endl;
+cout<<"__________________________________________\n";
+cout << " " << Celsius << " \t\t " << Fehrenheit << " \t\t" << Kelvin;
+}
