@@ -1,0 +1,215 @@
+Q1
+#include<iostream>
+using namespace std;
+
+ class Train{
+  private :
+  int trainNum;
+  string trainName;
+  string source;
+  string Destination;
+  string trainTime;
+
+public :
+void setdata(){
+cout<<"=====ENTER TRAIN DETAILS=====\n";
+cout<<"ENTER TRAIN NUMBER : ";
+cin>>trainNum;
+cout<<"ENTER TRAIN NAME : ";
+cin>>trainName;
+cout<<"ENTER TRAIN SOURCE  : ";
+cin>>source;
+cout<<"ENTER TRAIN DESTINATION : ";
+cin>>Destination;
+cout<<"ENTER TRAIN TIME  : ";
+cin>>trainTime;
+}
+void header()
+{
+cout<<"...............................................\n";
+cout<<"TrainNum"<<"\t"<<"TrainName"<<"\t"<<"TrainSource"<<"\t"<<"TrainDesti"<<"\t"<<"TrainTime"<<endl;
+cout<<"...............................................\n";
+}
+void getdata()
+{
+cout<<"...............................................\n";
+cout<<trainNum<<"\t"<<"\t"<<trainName<<"\t"<<"\t"<<source<<"\t"<<"\t"<<Destination<<"\t"<<"\t"<<trainTime<<endl;
+cout<<"...............................................\n";
+}
+int Sreachdata(int n)
+{
+if(trainNum == n)
+{
+cout<<"TRAIN NUMBER : "<<trainNum<<endl;
+cout<<"TRAIN NAME: "<<trainName<<endl;
+cout<<"TRAIN SOURCE : "<<source<<endl;
+cout<<"TRAIN DESTINATION :"<<Destination<<endl;
+cout<<"TRAIN TIME : "<<trainTime<<endl;
+return 0;
+
+}
+else {
+cout<<"Data not Found!!!";
+return 1;
+}
+}
+ };
+int main()
+{
+Train t1[3];
+int n ,check;
+
+ for(int i=0;i<3;i++)
+ {
+  t1[i].setdata();
+ }
+ 
+ t1[0].header();
+ for(int i=0;i<3;i++)
+ {
+  t1[i].getdata();
+ }
+cout<<"SEARCH TRAIN NUMBER  : ";
+cin>>n;
+
+for(int i=0;i<n;i++)
+ {
+  t1[i].Sreachdata(n);
+ }
+if(check==1){
+cout<<"Data is not Foundddd"<<endl;
+}
+}
+
+Q2
+#include<iostream>
+using namespace std;
+
+class Supermarket
+{
+
+	private :	
+	
+		int itm_no;
+		string itm_name;
+		int itm_qty;
+		double itm_price;
+		double itm_dis;
+	
+	public :
+	
+	void setdata()
+	{
+		cout << "____________________________________" << endl;
+		cout << "Enter item number: ";
+		cin >> itm_no;
+		cout << "Enter item name: ";
+		cin >> itm_name;
+		cout << "Enter item quantity(pcs): " ;
+		cin >> itm_qty;
+		cout << "Enter item price(rs.): ";
+		cout << " Rs." ;
+		cin >> itm_price;
+	
+		for(int i=0;i>=0;i++)
+		{
+			cout << "Enter item discount(%): ";
+			cin >> itm_dis;
+			
+				if(itm_dis>=0 && itm_dis<=100)
+				{
+					break;
+				}else
+					{
+					cout << "____________________________________" << endl;
+					cout << "Invalid...\nPlease enter dis. between 1 to 100\n";
+				    cout << "____________________________________" << endl;
+	                }
+		}
+	}
+	
+	
+	
+	void user()
+	{
+	
+	string a="person1@1234",b="abcdef678";
+	string id,pass;
+	
+	
+	cout << "Enter your ID: ";
+	cin >> id;
+	
+	cout << "Enter your password: ";
+	cin >> pass;
+	
+	if(a == id && b == pass)
+	{
+	cout << "____________________________________" << endl;
+	cout << "LOGIN SUCESSFULLY" << endl;
+	cout << "____________________________________" << endl;
+	}else{
+	cout << "____________________________________" << endl;
+	cout << "LOGIN FAIL\nPLEASE TRY AGAIN" <<  endl;
+	cout << "____________________________________" << endl;
+	user();
+	}
+	}
+	void table(){
+	
+	cout << endl << itm_no << "\t" << itm_name << "\t\t" << itm_qty << "\t" << itm_price << "\t" << itm_dis;
+	} 
+	
+	int getdata(int n)
+	{
+	
+	if(itm_no==n){
+	cout << "Item number:   " << itm_no << endl;
+	cout << "Item name:     " << itm_name << endl;
+	cout << "Item quantity: " << itm_qty << " Pcs" << endl;
+	cout << "Item price:    " << itm_price << " Rs." << endl;
+	cout << "Item discount: " << itm_dis << "%" << endl;
+	}
+	
+	return 0;
+	}
+	
+};
+int main()
+{
+cout << "____________________________________" << endl ;
+cout << "ID:person1@1234 \nPASS:abcdef678\n";
+cout << "____________________________________" << endl ;
+int n,a;
+Supermarket c1[3],c;
+c1[1].user();
+ cout << "Enter item details" << endl;
+ for(int i=0;i<3;i++)
+ {
+  
+  c1[i].setdata();
+ }
+
+cout << endl << endl <<"Itm no.\tItm name\tqty.\tprice\tdis.";
+for(int i=0;i<3;i++)
+ {
+  
+  c1[i].table();
+ }
+cout << endl << "____________________________________" << endl ;
+cout << "Enter item number you want to see: ";
+cin >> n;
+cout << "____________________________________" << endl ;
+
+ 
+ for(int i=0;i<3;i++)
+ {
+
+a=c1[i].getdata(n);
+}
+
+if(a==1){ 
+ cout << "\n\nNOT FOUND.";
+ }
+
+}
