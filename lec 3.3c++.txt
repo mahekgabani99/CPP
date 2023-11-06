@@ -1,0 +1,145 @@
+(Q1)
+#include<iostream>
+using namespace std;
+
+	class DiamondCompany{
+
+	public :
+	
+ 	int comp_Id;
+ 	string comp_Name;
+ 	int comp_Staff_Quantity;
+ 	double comp_Revenue;
+ 	int comp_Import_Raw_Diamonds;
+ 	int comp_Export_Diamonds;
+ 	string comp_Ceo;
+	
+ 	DiamondCompany(int comp_Id,string comp_Name,int comp_Staff_Quantity,double comp_Revenue,int comp_Import_Raw_Diamonds,int comp_Export_Diamonds,string comp_Ceo)
+ 	{
+ 		this->comp_Id=comp_Id;
+ 		this->comp_Name=comp_Name;
+ 		this->comp_Staff_Quantity=comp_Staff_Quantity;
+		this->comp_Revenue=Comp_Revenue;
+ 		this->comp_Import_Raw_Diamonds=comp_Import_Raw_Diamonds;
+ 		this->comp_Export_Diamonds=comp_Export_Diamonds;
+ 		this->comp_Ceo=comp_Ceo;
+ 	}
+	void getdata()
+	{
+		cout<<"\n.................................\n";
+		cout << "   Comp_ID: " << comp_Id << endl;
+		cout << "   Comp_Name: " << comp_Name << endl;
+		cout << "   Comp_Staff_Quantity: " << Comp_Staff_Quantity << endl;
+		cout << "   Comp_Revenue : " << Comp_Revenue << "Rs per year" << endl;
+		cout << "   Comp_Raw_Diamonds_Import: " << Comp_Raw_Diamonds_Import << endl;
+		cout << "   Comp_Diamonds_Export: " << Comp_Diamonds_Export << endl;
+		cout << "   Comp_Ceo_name: " << comp_Ceo << endl;
+		cout<<"\n.................................\n";
+	}
+};
+int main()
+{
+int n;
+
+        int comp_Id;
+ 	string comp_Name;
+ 	int comp_Staff_Quantity;
+ 	double comp_Revenue;
+ 	int comp_Import_Raw_Diamonds;
+ 	int comp_Export_Diamonds;
+ 	string comp_Ceo;
+ 	
+	cout << "ENTER NUMBERS OF DIAMOND COMPANIES : ";
+	cin >> n;
+
+	for(int i=0;i<n;i++)
+	{
+		cout << "Enter Company Id: ";
+		cin >> comp_Id;
+		cout << "Enter Company Name  ";
+		cin >> comp_Name;
+		cout << "Enter Company staff quantity: ";
+		cin >>comp_Staff_Quantity ;
+		cout << "Enter Company revenue: ";
+		cin >> comp_Revenue;
+		cout << "Enter Company raw diamond import: ";
+		cin >> comp_Import_Raw_Diamonds;
+		cout << "Enter Company diamond export: ";
+		cin >> comp_Export_Diamonds;
+		cout << "Ente Company CEO: ";
+		cin >> comp_Ceo;
+			
+		DiamondCompany c1(comp_Id,comp_Name,comp_Staff_Quantity,comp_Revenue,comp_Import_Raw_Diamonds,comp_Export_Diamonds,comp_Ceo);
+		cout<<"\n:::::::::::::::::::::::::::::::::::\n";
+		cout << "   COMPANY INFORMATION   ";
+		cout<<"\n:::::::::::::::::::::::::::::::::::\n";
+		c1.getdata();
+}
+}
+
+(Q2)
+
+#include<iostream>
+using namespace std;
+
+class Cafe{
+	
+	private:	
+	int cafe_Id;
+	string cafe_Name;
+	string cafe_Type;
+	string cafe_Rating;
+	string Location;
+	int cafe_Esta_Year;
+	int Staff_Qnt;
+	
+	public:
+		Cafe()
+		{
+			cout<<"===========================\n";
+			cout<<"CAFEE INFORMATIONSS";
+			cout<<"\n===========================\n";
+		}
+		void setData(){
+			cout<<"Enter Cafe Id : ";
+			cin>>cafe_Id;
+			cout<<"Enter Cafe Name : ";
+			cin>>cafe_Name;
+			cout<<"Enter Cafe type : ";
+			cin>>cafe_Type;
+			cout<<"Enter Cafe rating : ";
+			cin>>cafe_Rating;
+			cout<<"Enter Cafe Location : ";
+			cin>>Location;
+			cout<<"Enter Cafe cafe_esta_year : ";
+			cin>>cafe_Esta_Year;
+			cout<<"Enter Cafe staff quntity : ";
+			cin>>Staff_Qnt;
+		}
+		void getData(){
+			 cout<<cafe_Id<<"\t"<<cafe_Name<<"\t"<<"\t"<<cafe_Type<<"\t"<<"\t"<<cafe_Rating<<"\t"<<"\t"<<Location<<"\t"<<"\t"<<cafe_Esta_Year<<"\t"<<"\t"<<Staff_Qnt<<endl<<endl;
+			 cout<<"................................................................................\n";
+		}
+		void header()
+		{
+			cout<<"................................................................................\n";
+			cout<<"Cafe_Id"<<"\t"<<"  Cafe_Name"<<"\t"<<"Cafe_Type"<<"\t"<<"Cafe_Rating"<<"\t"<<"Cafe_Location"<<"\t"<<"cafeYear"<<"\t"<<"Staffqnt"<<endl;
+			cout<<"................................................................................\n";
+		}
+};
+int main()
+{
+	int n;
+	cout<<"ENTER NUMBERS OF CAFEESS:\t";
+	cin>>n;
+	Cafe c1[n];
+	for(int i=0;i<n;i++)
+	{
+		c1[i].setData();
+	}
+	c1[0].header();
+	for(int i=0;i<n;i++)
+	{
+		c1[i].getData();
+	}
+}
