@@ -1,0 +1,114 @@
+Q1
+#include<iostream>
+using namespace std;
+class StudentRecord{
+	private :
+	int stu_id;
+	string stu_name;
+	int stu_age;
+	string stu_course;
+	string stu_city;
+	string stu_email;
+	string stu_college;
+	
+	public :
+	
+	void setData(int stu_id,string stu_name,int stu_age,string stu_course,string stu_city,string stu_email,string stu_college)
+	{
+		this->stu_id=stu_id;
+		this->stu_name=stu_name;
+		this->stu_age=stu_age;
+		this->stu_course=stu_course;
+		this->stu_city=stu_city;
+		this->stu_email=stu_email;
+		this->stu_college=stu_college;
+	}
+	void getData()
+	{
+	    cout<<"--Student Details--"<<endl;
+	    cout<<"\n_________________________\n";
+		cout<<"Stu_id : "<<stu_id<<endl;
+		cout<<"Stu_name : "<<stu_name<<endl;
+		cout<<"Stu_age : "<<stu_age<<endl;
+		cout<<"Stu_course : "<<stu_course<<endl;
+		cout<<"Stu_city : "<<stu_city<<endl;
+		cout<<"Stu_email : "<<stu_email<<endl;
+		cout<<"Stu_college : "<<stu_college<<endl;
+		cout<<"\n_________________________\n";
+	}
+	
+};
+int main()
+{
+	StudentRecord s1,s2,s3,s4,s5;
+	s1.setData(1,"Mahek",19,"Comp eng","pune","mahek@gmail.com","mit");
+	s2.setData(2,"Nirja",20,"Commerce","Surat","nirja@gmail.com","vanitavishram");
+	s3.setData(3,"Aastha",23,"Science","Surat","aastha@gmail.com","sket");
+	s4.setData(4,"kaksa",21,"Science","Bombay","kaksa@gmail.com","iit");
+	s5.setData(5,"Dhwani",29,"CompSci","Pune","dhwani@gmail.com","mit");
+	
+	s1.getData();
+	s2.getData();
+	s3.getData();
+	s4.getData();
+	s5.getData();
+	
+
+}
+
+Q2
+
+#include<iostream>
+using namespace std;
+class CustomerRecord{
+	private :
+	int custm_id;
+	string custm_name;
+	int custm_age;
+	string custm_city;
+	string custm_mobile_number;
+	int custm_simcard_validity;
+	string custm_telecom_brand_name;
+	
+	public :
+		void setdata(int custm_id,string custm_name,int custm_age,string custm_city,string custm_mobile_number,int custm_simcard_validity,string custm_telecom_brand_name)
+		{
+			this->custm_id=custm_id;
+			this->custm_name=custm_name;
+			this->custm_age=custm_age;
+			this->custm_city=custm_city;
+			this->custm_mobile_number=custm_mobile_number;
+			this->custm_simcard_validity=custm_simcard_validity;
+			this->custm_telecom_brand_name=custm_telecom_brand_name;
+	
+		}
+		void getData()
+		{
+			cout<<"\n----------------------\n";
+			cout<<"Custm_id:"<<custm_id<<endl;
+			cout<<"Custm_name:"<<custm_name<<endl;
+			cout<<"Custm_age:"<<custm_age<<endl;
+			cout<<"Custm_city:"<<custm_city<<endl;
+			cout<<"Custm_mobile_number:"<<custm_mobile_number<<endl;
+			cout<<"Custm_simcard_validity:"<<custm_simcard_validity<<endl;
+			cout<<"Custm_telecom_brand_name:"<<custm_telecom_brand_name;
+			cout<<"\n----------------------\n";
+		}
+	
+};
+int main()
+{
+	CustomerRecord c1,c2,c3,c4,c5;
+	
+	c1.setdata(1,"MAHEK",19,"surat","924786532",2,"JIO");
+	c2.setdata(2,"PRACHI",20,"surat","98934673341",3,"JIO");
+	c3.setdata(3,"AASTHA",21,"surat","2345678933",5,"JIO");
+	c4.setdata(4,"KAKSHA",22,"surat","1234567894",3,"JIO");
+	c5.setdata(5,"DRASHTI",18,"surat","1234776789",1,"JIO");
+	
+	c1.getData();
+	c2.getData();
+	c3.getData();
+	c4.getData();
+	c5.getData();
+}
