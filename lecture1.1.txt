@@ -1,0 +1,70 @@
+Q1
+
+#include<iostream>
+using namespace std;
+int main()
+{
+   int arr[10], i;
+   cout<<"ENTER ANY 10 NUMBER : ";
+   for(i=0; i<10; i++)
+      cin>>arr[i];
+   cout<<"\nEVEN NUMBERS ARE :\n";
+   for(i=0; i<10; i++)
+   {
+      if(arr[i]%2==0)
+         cout<<arr[i]<<" ";
+   }
+   cout<<endl;
+   return 0;
+}
+
+Q2
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int year;
+  cout << "Enter a year : ";
+  cin >> year;
+  if (year % 400 == 0) {
+    cout << year << " is a leap year.";
+  }
+  else if (year % 100 == 0) {
+    cout << year << " is not a leap year.";
+  }
+  else if (year % 4 == 0) {
+    cout << year << " is a leap year.";
+  }
+  else {
+    cout << year << " is not a leap year.";
+  }
+  return 0;
+}
+
+Q3
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	string txt;
+	cout << "\n Enter any String   =  ";
+	getline(cin, txt);
+	for (int i = 0; i < txt.length(); i++)
+  	{
+  		if(txt[i] >= 65 && txt[i] <= 90)
+  		{
+  			txt[i] = txt[i] + 32;
+  		}
+  		else if(txt[i] >= 97 && txt[i] <= 122)
+  		{
+  			txt[i] = txt[i] - 32;
+		}
+  	}
+	cout<< "\n After Toggle Case = " << txt;
+ 	return 0;
+}
