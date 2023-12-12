@@ -1,0 +1,82 @@
+Q1
+
+#include<iostream>
+using namespace std;
+class M5_4{
+	private :
+		int num;
+	public :
+		void setData(string obj){
+			cout<<obj<<" ENTER NUMBER : ";
+			cin>>num;
+		
+		}
+
+	bool operator>(M5_4 v2)
+	{
+		if(num>v2.num){
+			return true ;
+		}
+		else{
+			return false;
+		}
+	}	
+	
+	bool operator<(M5_4 v2)
+	{
+		if(num<v2.num){
+			return true ;
+		}
+		else{
+			return false;
+		}
+	}	
+	
+	bool operator==(M5_4 v2)
+	{
+		if(num==v2.num){
+			return true ;
+		}
+		else{
+			return false;
+		}
+	}	
+};
+int main(){
+	
+	M5_4 v1,v2;
+	v1.setData("V1");
+	v2.setData("V2");
+	if(v1>v2){
+	    	cout<<"_________________________"<<endl;
+		cout<<"V1 IS HIGHER VALUE";
+	}
+	else{
+		cout<<"V2 IS HIGHER VALUE";
+	}
+	cout<<"\n----------------------\n";
+
+	v1.setData("V1");
+	v2.setData("V2");
+	if(v1<v2){
+	    	cout<<"_________________________"<<endl;
+		cout<<"v1 IS LOWER VALUE";
+	}
+	else{
+		cout<<"v2 IS LOWER VALUE";
+	}
+	
+	cout<<"\n----------------------\n";
+	
+	v1.setData("v1");
+	v2.setData("v2");
+	if(v1==v2){
+		cout<<"v1 and v2 is equal ";
+	}
+	else{
+		cout<<"v1 and v2 is not equal";
+	}
+	
+	cout<<"\n----------------------\n";
+
+}
