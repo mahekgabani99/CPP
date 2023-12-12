@@ -80,12 +80,12 @@ public:
 int main() {
   
     Distance input1;
-    input1.setKm(4);
-    input1.setMeter(1050);
+    input1.setKm(3);
+    input1.setMeter(1020);
 
     Distance input2;
-    input2.setKm(3);
-    input2.setMeter(2060);
+    input2.setKm(2);
+    input2.setMeter(2050);
 
     cout << "Input 1:" <<endl;
     input1.display();
