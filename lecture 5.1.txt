@@ -1,0 +1,65 @@
+Q1
+#include<iostream>
+using namespace std;
+class Arithmetic{
+      private :
+              int a=8,b=9;
+      public :
+             void operaion(){
+                    cout<<"A/B : "<<a/b<<endl;
+             }
+             void operaion(int a,int b,int c){
+                  cout<<"A-B-C : "<<a-b-c<<endl;
+             }
+             void operaion(int a,int b,int c,int d){
+                  cout<<"A*B*C*d : "<<a*b*c*d<<endl;
+             }
+             void operaion(int a,int b,int c,int d,int e){
+                  cout<<"A+B+C+D : "<<a+b+c+d<<endl;
+             }
+             
+};
+int main(){
+    Arithmetic a1;
+    
+    a1.operaion();
+    a1.operaion(5,4,2);
+    a1.operaion(7,9,2,1);
+    a1.operaion(10,20,30,40,50);
+}
+
+
+Q2
+
+#include<iostream>
+using namespace std;
+class Cricket{
+      public :
+      int getTotalOvers(){
+             return 50;      
+      }
+};
+class T20match : public Cricket{
+    public :
+      int getTotalOvers(){
+          return 20;
+      }
+};
+class Testmatch : public Cricket {
+    public :
+     int  getTotalOvers(){
+          return 90;
+     }
+};
+int main(){
+    Cricket c;
+    T20match t1;
+    Testmatch t2;
+    
+    cout<<"Cricket match has : "<<c.getTotalOvers()<<"overs"<<endl;
+    cout<<"____________________________"<<endl;
+    cout<<"T20 match has : "<<t1.getTotalOvers()<<"overs"<<endl;
+        cout<<"____________________________"<<endl;
+    cout<<"Test match has : "<<t2.getTotalOvers()<<"overs"<<endl;
+}
+
