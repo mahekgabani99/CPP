@@ -1,0 +1,90 @@
+Q1
+#include<iostream>
+using namespace std;
+class Math{
+	protected :
+	virtual double calculate()=0;
+};
+class Circle: public Math{
+	private :
+		double radius;
+		
+	public :
+		void setCricle(double r)
+		{ 
+			radius=r;	
+		}
+
+		double calculate(){
+			return 3.1415*radius*radius;
+		}
+		
+		void getCircle(){
+			 cout<<"Area of circle : "<<calculate()<<endl;
+		}
+};
+class Triangle: public Math{
+	private :
+		double h,b;
+	public :
+		void setTriangle(double height,double base){
+			h=height;
+			b=base;
+		}
+		double calculate(){
+			return 0.5*b*h;
+		}
+		void getTriangle(){
+			 cout<<"Area of Triangle : "<<calculate()<<endl;
+		}
+};
+	
+class rectangle: public Math{
+	private :
+		double l,w;
+	public :
+		void setrectangle(double length,double width){
+			l=length;
+			w=width;
+		}
+		double calculate(){
+			return l*w;
+		}
+		void getrectangle(){
+			 cout<<"Area of rectangle : "<<calculate()<<endl;
+		}
+	
+};
+int main(){
+	
+	double radius;
+	cout<<"Enter radius : ";
+	cin>>radius;
+	
+ 	Circle c;
+ 	c.setCricle(radius);
+	c.getCircle();
+	cout<<"_________________________________\n";
+	
+	double h,b;
+	cout<<"Enter base : ";
+	cin>>b;
+	cout<<"Enter height : ";
+	cin>>h;
+	
+	Triangle t;
+	t.setTriangle(b,h);
+	t.getTriangle();
+	cout<<"_________________________________\n";
+	
+	double l,w;
+	cout<<"Enter length : ";
+	cin>>l;
+	cout<<"Enter width : ";
+	cin>>w;
+	
+	rectangle r;
+	r.setrectangle(l,w);
+	r.getrectangle();
+	cout<<"_________________________________\n"; 	
+}
