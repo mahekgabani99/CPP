@@ -1,0 +1,82 @@
+Q1
+#include <iostream>
+using namespace std;
+
+class ExceptionHandling {
+	private:
+		int num;
+public:
+    void setData() {
+    	 cout<<"EnterThe Number : ";
+    	 cin>>num;
+    	 
+        try {
+            if (num == 0) {
+                throw "Zero Division Error: Cannot divide by zero!";
+            } else if (num < 0) {
+                throw -1;
+            } else {
+                cout << "Result : " << 100 / num << endl;
+            }
+        } catch (char errMsg[]) {
+            cout << "Exception : " << errMsg << endl;
+        } catch (int errCode) {
+            cout << "Exception with code : " << errCode << endl;
+        } catch (...) {
+            cout << "an unknown exception." << endl;
+        }
+    }
+};
+
+int main() {
+    ExceptionHandling e1;
+
+    cout<<endl<<"Example 1 Divide by 0 :" << endl;
+    e1.setData();
+
+    cout<<endl<<"Example 2 Negative Number :" << endl;
+    e1.setData();
+
+    cout<<endl<<"Example 3 Valid Number :" << endl;
+    e1.setData();
+
+}
+
+
+
+
+
+Q2 
+
+#include <iostream>
+using namespace std;
+
+class Vote{
+	private :
+		int age;
+public:
+    void setData() {
+    	cout << "Enter your age: ";
+    	cin >> age;
+
+        if (age < 18) {
+            throw 0; 
+        } else {
+            cout << "You are eligible to vote " << endl;
+        }
+    }
+};
+
+int main() {
+    Vote v1;
+    
+    try {
+        v1.setData();
+    } catch (int error) {
+        if (error == 0) {
+            cout << "You are not eligible to vote as you are under 18 years old." << endl;
+        } else {
+            cout << "Errer" << endl;
+        }
+    }
+}
