@@ -1,0 +1,209 @@
+Q1
+#include<iostream>
+using namespace std;
+int factorial(int n);
+int main();
+{
+	int n;
+	cout<<"enter a positive integer:";
+	cin n;
+	cout<<"factorial of"<<n<<"="<<factorial(n);
+	return 0;
+	int factorial(int n)
+	{
+		if(n>1)
+		return n*factorial(n-1)
+		else
+		return1;
+
+	}
+}
+
+Q2
+
+#include<iostream>
+using namespace std;
+class Bank{
+	private:
+		int acc_number;
+		string acc_name;
+		float acc_type;
+		string acc_branch;
+		int acc_balance;
+		
+		public:
+			void display()
+			{
+				cout<<"enter acc num";
+				cin>>acc_number;
+				cout<<"enter acc name";
+				cin>>acc_name;
+				 cout<<"enter acc type";
+				cin>>acc_type
+				 cout<<"enter branch";
+				cin>>acc_branch;
+				 cout<<"enter acc balance";
+				cin>>acc_balance;
+				 
+			}
+			void output(){
+				cout<<"enter acc number"<< acc_number <<endl;
+				cout<<"enter name"<< acc_name <<endl;
+				cout<<"enter acc ntype"<< acc_type<<endl;
+				cout<<"enter acc branch"<< acc_branch <<endl;
+				cout<<"enter acc balance"<< acc_balance <<endl;
+				
+			}
+			else{
+				cout<<"data not found";
+				return 1;
+
+
+Q3
+
+#include<iostream>
+using namespace std;
+float division(float num,float den)
+{
+	return(num/den);
+}
+int main()
+{
+	float numerator=12.5;
+	float denominator=0;
+	float result;
+	result=division(numerator,denominator);
+	cout<<"the quotient of 12.5/0 is"<<result<< endl;
+	
+}
+
+Q4
+
+#include<iostream>
+using namespace std;
+class A{
+	public:
+		void func(){
+			cout<<"class a"<<endl;
+		}
+};
+class B{
+	public:
+		void func()
+		{
+			cout<<"class b"<<endl;
+		}
+};
+class C: public A, public B{
+};
+int main(){
+	C obj;
+	obj.func();
+	return 0;
+}
+
+Q5
+
+#include<iostream>
+using namespace std;
+class Hoteldetails{
+
+private:
+	int hotel_id;
+	string hotel_name;
+	string hotel_type;
+	int hotel_rating;
+    string location;
+	int hotel_establish_year;
+	int hotel_staff_quantity;
+	int room_quantity;
+	public:
+		void setdata()
+		{
+			cout<<"\n_______________________\n";
+			
+			cout<<"enter hotel id";
+			cin>>hotel_id;
+			
+			cout<<"enter name";
+			cin>>hotel_name;
+			
+			cout<<"enter type";
+			cin>>hotel_type;
+			
+			cout<<"enter rating";
+			cin>>hotel_rating;
+			
+			cout<<"enter location";
+			cin>>location;
+			
+			cout<<"enter establish year";
+			cin>>hotel_establish_year;
+			
+			cout<<"staff quantity";
+			cin>>hotel_staff_quantity;
+			
+			cout<<"room quantity";
+			cin>>room_quantity;
+			
+			
+			cout<<"\n_______________________\n";
+			void getdata(){
+			
+
+				cout<<"\n_______________________\n";
+			    	cout<<"hotel id :"hotel_id<<;
+					cout<<"name :"hotel_name<<;
+					cout<<"hotel type :"hotel_type<<;
+					cout<<"hotel rating :"hotel_rating<<;
+					cout<<"hotel location :"location<<;
+					cout<<"hotel establish year :"hotel_establish_year<<;
+					cout<<"hotel room quamtity :"room_quantity<<;
+						cout<<"\n_______________________\n";
+		}
+			
+		};
+		
+		int main()
+		{
+			int n;
+			cout<<"enter number os hotels";
+			cin>>n;
+			Hoteldetails h1[n];
+			for(int i=0;i<n;i++)
+			{
+				h1[i].setdata();
+			}
+			for(int i=0;i<n;i++)
+			{
+				h1[i].getdata();
+			}
+		}
+		};
+
+Q6
+
+#include<iostream>
+using namespace std;
+class Parent{
+	public:
+		void illustrates_print()
+		{
+			cout<<"base function"<<endl;
+			
+		}
+	};
+	class Child : public Parent{
+		public:
+			void  illustrates_print()
+			{
+				cout<<"DERIVED FUNCTION"<<endl;
+				
+			}
+	};
+	int main()
+	{
+		Child child_derived;
+			child_derived.illustrates_print();
+			return 0;
+	}
